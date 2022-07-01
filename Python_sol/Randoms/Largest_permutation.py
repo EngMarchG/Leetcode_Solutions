@@ -8,6 +8,8 @@ be created by executing atmost B swaps.
 Constraints:
 1 <= N <= 106
 1 <= B <= 109
+
+https://www.interviewbit.com/problems/largest-permutation/
 """
 
 def max_perm(arr, B):
