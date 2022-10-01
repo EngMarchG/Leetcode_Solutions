@@ -3,9 +3,11 @@
 
 class Solution:
     def pushDominoes(self, dominoes: str) -> str:
+        # Hashtable to store the turn it was tipped over
         hmap = {}
         dominoes = [x for x in dominoes]
         
+        # Tipping the dominoes given
         def move(direction, pos, rank):
             side = 1
             if direction == "L":
@@ -15,7 +17,8 @@ class Solution:
             hmap[pos] = rank
             rank += 1
             return rank, pos
-            
+        
+        # Decide if the domino tipped over is correct or not
         def decision(direction, pos, rank):
             side = 1
             opp = "L"
@@ -33,6 +36,8 @@ class Solution:
                 return 0
             return 1
         
+        # Looping through each element with the correct
+        # restrictions based on the side
         for pos, num in enumerate(dominoes):
             rank = 1
             if num == "L":
@@ -44,6 +49,7 @@ class Solution:
                     rank, pos = move(dominoes[pos], pos, rank)
                     
         return "".join(dominoes)
+                
 
             """Non dry sol
 class Solution:
