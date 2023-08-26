@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-        
+        # Time Complexity: O(n) Space Complexity: O(1) or O(h) if considering recursion stack
         def recur(tree, path):
             if not tree:
                 return 0
