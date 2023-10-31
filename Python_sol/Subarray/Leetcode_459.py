@@ -13,7 +13,7 @@ class Solution:
             return s[0]==s[1]
         
         for i in range(1, len(s)//2+1):
-            if len(s) % (i+1) == 0 and set(s[:i+1]) == setto:
+            if len(s) % (i+1) == 0:
                 flag = True
                 temp = 1
                 while (i+1) * temp < len(s):
