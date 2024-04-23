@@ -35,3 +35,22 @@ class Solution:
             else:
                 left = mid + 1
 """
+
+"""
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        for row in matrix:
+            if row[0] > target:
+                break
+            if row[-1] < target:
+                continue
+
+            for num in row:
+                if target == num:
+                    return 1
+
+                if num > target:
+                    return 0
+            
+            return 0
+"""
