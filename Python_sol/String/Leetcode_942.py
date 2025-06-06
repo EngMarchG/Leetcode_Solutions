@@ -12,3 +12,5 @@ class Solution:
                 right -= 1
         ans.append(left)
         return ans
+
+### To implement better solution
